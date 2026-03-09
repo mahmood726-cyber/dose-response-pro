@@ -1,5 +1,7 @@
 # Dose Response Pro v18.1
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18922680.svg)](https://doi.org/10.5281/zenodo.18922680)
+
 **A browser-based dose-response meta-analysis tool implementing the Greenland & Longnecker two-stage generalized least squares (GLS) method.**
 
 No installation required. Open `index.html` in any modern browser to begin.
@@ -106,6 +108,7 @@ dose-response-pro/
   author = {Ahmad, Mahmood and Kumar, Niraj and Dar, Bilaal and Khan, Laiba and Woo, Andrew},
   year = {2026},
   url = {https://github.com/mahmood726-cyber/dose-response-pro},
+  doi = {10.5281/zenodo.18922680},
   version = {18.1},
   license = {MIT}
 }
