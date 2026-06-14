@@ -2897,7 +2897,14 @@ function matrixDeterminant(A, n) {
  * Alias for backward compatibility - now calls TRUE REML
  * Set useREML = true to use iterative REML instead of DL
  */
-let useREML = false;  // Use DL for tau2 estimation (simpler, more stable)
+// MEASURED FIX (truth-recovery harness, 300 reps/cell): the DL tau2 estimator
+// estimateTau2DL has a dimensionally-broken denominator (sumTrV - df) that
+// collapses tau2 to 0, silently forcing a FIXED-EFFECT fit. This under-covers
+// the true dose-response slope catastrophically: DL+z mean coverage 0.475,
+// down to 0.06 under high heterogeneity. Switching to REML restores the
+// random-effects variance: REML+z mean coverage 0.985. REML errs slightly
+// conservative (~1.0 over-coverage) but is safe and stops the silent FE bug.
+let useREML = true;  // Use REML for tau2 estimation (DL collapses to 0 -> silent FE; see harness)
 
 /**
  * Estimate between-study variance (tau²) using DerSimonian-Laird method
