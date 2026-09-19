@@ -578,13 +578,13 @@ If discrepancies arise, check:
 
 5. **Orsini N, et al.** (2023). dosresmeta: Multivariate Dose-Response Meta-Analysis. R package version 2.0.1. https://CRAN.R-project.org/package=dosresmeta
 
-6. **Crippa A, et al.** (2018). One-stage dose-response meta-analysis for aggregated data. *Statistical Methods in Medical Research*, 27(6), 1769-1787. https://doi.org/10.1177/0962280218792485
+6. **Crippa A, Discacciati A, Bottai M, Spiegelman D, Orsini N.** (2019). One-stage dose-response meta-analysis for aggregated data. *Statistical Methods in Medical Research*, 28(5), 1579-1596. https://doi.org/10.1177/0962280218773122
 
 ### Applied Examples
 
 7. **Bagnardi V, et al.** (2004). Alcohol consumption and the risk of cancer: a meta-analysis. *Alcohol Research & Health*, 27(3), 185-192.
 
-8. **Aune A, et al.** (2012). Meat consumption and the risk of type 2 diabetes: a dose-response meta-analysis. *American Journal of Clinical Nutrition*, 95(4), 944-951. https://doi.org/10.3945/ajcn.111.027978
+8. **Pan A, Sun Q, Bernstein AM, et al.** (2011). Red meat consumption and risk of type 2 diabetes: 3 cohorts of US adults and an updated meta-analysis. *American Journal of Clinical Nutrition*, 94(4), 1088-1096. https://doi.org/10.3945/ajcn.111.018978
 
 ### Statistical Foundations
 
