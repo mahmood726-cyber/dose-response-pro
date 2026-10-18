@@ -2349,9 +2349,13 @@ function bootstrapDoseResponse(points, nBootstrap = 1000, ciLevel = 0.95, modelT
 
     // Create bootstrap dataset
     const bootPoints = [];
-    for (const studyId of bootStudyIds) {
+    for (let drawIndex = 0; drawIndex < bootStudyIds.length; drawIndex++) {
+      const studyId = bootStudyIds[drawIndex];
       const studyPoints = points.filter(p => p.id === studyId);
-      bootPoints.push(...studyPoints);
+      // Repeated bootstrap draws must form separate independent study blocks.
+      // Preserve all original dose contrasts and source points without mutation.
+      const bootstrapId = `__bootstrap_draw_${iter}_${drawIndex}`;
+      bootPoints.push(...studyPoints.map(p => ({ ...p, id: bootstrapId })));
     }
 
     // Fit model to bootstrap data
